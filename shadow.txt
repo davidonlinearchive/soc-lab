@@ -1,0 +1,7 @@
+alex_x: CSLb#r&EIeJlq+0}
+
+
+----------wazuh cred------------
+You can access the web interface https://<wazuh-dashboard-ip>:443
+    User: admin
+    Password: ZXk*a0r6gNFU8yF3PM7C3daAH8Ojszi4
