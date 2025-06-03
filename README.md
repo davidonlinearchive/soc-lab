@@ -82,24 +82,6 @@ An attacker successfully conducted an OSINT reconnaissance against an employee n
 
 ---
 
-## **Free Tools for Professional Diagrams**
-
-To visually document this attack and response flow, you can use:
-
-### 🔧 **1. [Draw.io (diagrams.net)](https://draw.io)**
-- **Pros:** Free, browser-based, works with Google Drive/GitHub.
-- **Use Case:** Create flow diagrams for attack paths, SIEM alerts, response workflows.
-
-### 🧰 **2. [Lucidchart (Free Tier)](https://lucidchart.com)**
-- **Pros:** Professional templates, GCP icons.
-- **Use Case:** Architectural diagrams showing GCP services (Cloud SQL, E2, etc.)
-
-### 📦 **3. [Mermaid.js (for Markdown)](https://mermaid.live)**
-- **Pros:** Great for GitHub wikis and Markdown docs.
-- **Use Case:** Inline diagrams like sequence diagrams and flowcharts.
-
----
-
 ## **Conclusion**
 
 This incident highlights the critical need for strong identity protection, vigilant SIEM monitoring, and user security awareness. Had proper MFA and phishing training been in place, the attack could have been prevented or detected much earlier.
