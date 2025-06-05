@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SOC Lab - Simple Attack Flow Diagram</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #eef2f5;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .diagram-container {
+      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    .node {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 10px 15px;
+      margin: 20px;
+      text-align: center;
+      background-color: #f9f9f9;
+    }
+
+    .arrow {
+      text-align: center;
+      font-size: 20px;
+      margin: -10px 0;
+    }
+
+    .info-box {
+      background-color: #f4f4f4;
+      border-left: 4px solid #3498db;
+      padding: 10px;
+      margin-top: 30px;
+      border-radius: 6px;
+    }
+
+    .info-box h4 {
+      margin-top: 0;
+      color: #2c3e50;
+    }
+  </style>
+</head>
+<body>
+  <div class="diagram-container">
+    <h2>SOC Lab: Phishing to Database Exfiltration Flow</h2>
+
+    <div class="node">🎭 Attacker (IP: 95.213.x.x)</div>
+    <div class="arrow">↓</div>
+    <div class="node">📧 Phishing Email to Employee (alex_x)</div>
+    <div class="arrow">↓</div>
+    <div class="node">🔑 Compromised Credentials Entered</div>
+    <div class="arrow">↓</div>
+    <div class="node">🗄️ Access to GCP Cloud SQL (34.45.x.x)</div>
+    <div class="arrow">↓</div>
+    <div class="node">💾 Data Exfiltration Begins</div>
+    <div class="arrow">↓</div>
+    <div class="node">📋 Logs Captured by Cloud Logging / Wazuh Agent</div>
+    <div class="arrow">↓</div>
+    <div class="node">🚨 Alert Raised in SOC Dashboard</div>
+
+    <div class="info-box">
+      <h4>Detection Points & Monitoring</h4>
+      <p><strong>Wazuh Agent:</strong> Monitors `sql-monitor` for suspicious access and exfil scripts</p>
+      <p><strong>GCP Logs:</strong> Capture auth attempts and queries on Cloud SQL</p>
+      <p><strong>Behavioral Monitoring:</strong> Detects off-hours access, bulk data pulls, or geo-anomalies</p>
+    </div>
+  </div>
+</body>
+</html>

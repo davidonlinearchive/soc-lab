@@ -2,7 +2,7 @@
 # **Incident Report: Phishing Attack Leading to Database Credential Compromise**
 
 ## **Overview**
-
+![Diagram](./diagram.png)
 An attacker successfully conducted an OSINT reconnaissance against a new employee named **Alex**, the **Database Administrator Intern** at *InsureCo*, a small insurance firm with approximately 50 employees. The attacker used a **phishing email** impersonating the outsourced software development vendor, **AtlasConsult Co.**, to deceive Alex into submitting administrative credentials.
 
 ## **Phishing Email Details**
