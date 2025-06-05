@@ -3,7 +3,7 @@
 
 ## **Overview**
 
-An attacker successfully conducted an OSINT reconnaissance against an employee named **Alex**, the **Database Administrator** at *InsureCo*, a small insurance firm with approximately 50 employees. The attacker used a **phishing email** impersonating the outsourced software development vendor, **AtlasConsult Co.**, to deceive Alex into submitting administrative credentials.
+An attacker successfully conducted an OSINT reconnaissance against a new employee named **Alex**, the **Database Administrator Intern** at *InsureCo*, a small insurance firm with approximately 50 employees. The attacker used a **phishing email** impersonating the outsourced software development vendor, **AtlasConsult Co.**, to deceive Alex into submitting administrative credentials.
 
 ## **Phishing Email Details**
 

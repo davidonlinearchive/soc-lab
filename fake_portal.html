@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atlas Consulting - Security Portal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+            width: 100%;
+            max-width: 450px;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #2c3e50, #34495e);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        .alert-banner {
+            background: #ff6b6b;
+            color: white;
+            padding: 12px;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        .form-container {
+            padding: 40px;
+        }
+        
+        .ticket-info {
+            background: #f8f9fa;
+            border-left: 4px solid #007bff;
+            padding: 15px;
+            margin-bottom: 25px;
+            border-radius: 5px;
+        }
+        
+        .ticket-info h3 {
+            color: #2c3e50;
+            margin-bottom: 8px;
+            font-size: 16px;
+        }
+        
+        .ticket-info p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #2c3e50;
+            font-weight: 500;
+            font-size: 14px;
+        }
+        
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e1e8ed;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: border-color 0.3s ease;
+        }
+        
+        input[type="text"]:focus, input[type="password"]:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+        
+        .submit-btn {
+            width: 100%;
+            background: linear-gradient(135deg, #007bff, #0056b3);
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            font-size: 12px;
+            background: #f8f9fa;
+        }
+        
+        .security-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            color: #28a745;
+            font-size: 12px;
+            margin-top: 10px;
+        }
+        
+        .timer {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            color: #856404;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">ATLAS CONSULTING</div>
+            <div class="subtitle">Security Operations Portal</div>
+        </div>
+        
+        <div class="alert-banner">
+            🔒 SECURE SESSION - TICKET #5872 VERIFICATION REQUIRED
+        </div>
+        
+        <div class="form-container">
+            <div class="ticket-info">
+                <h3>Database API Failure - Urgent Response Required</h3>
+                <p>Critical error detected in client account retrieval system. Administrator verification needed to access diagnostic reports and restore service.</p>
+            </div>
+            
+            <div class="timer">
+                ⏱️ Session expires in: <strong>47 minutes</strong>
+            </div>
+            
+            <form id="verificationForm">
+                <div class="form-group">
+                    <label for="username">Database Username</label>
+                    <input type="text" id="username" name="username" placeholder="Enter your database username" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Database Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your database password" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="db_server">Database Server Address</label>
+                    <input type="text" id="db_server" name="db_server" placeholder="e.g., 0.0.0.0" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="db_name">Database Instance Name</label>
+                    <input type="text" id="db_name" name="db_name" placeholder="e.g., table_name" required>
+                </div>
+                
+                <button type="submit" class="submit-btn">
+                    🔍 Verify Credentials & Access Report
+                </button>
+            </form>
+            
+            <div class="security-badge">
+                🛡️ SSL Secured Connection
+            </div>
+        </div>
+        
+        <div class="footer">
+            Atlas Consulting Co. | Security Operations Center<br>
+            If you did not request this verification, please contact IT immediately at ext. 2847
+        </div>
+    </div>
+
+    <script>
+        // Simple form handling for demonstration
+        document.getElementById('verificationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // In a real scenario, this would be where credentials are captured
+            // For this mockup, we'll just show a success message
+            alert('Form submitted successfully!\n\nIn a real phishing scenario, this data would be captured.\nThis is for educational purposes only.');
+        });
+        
+        // Timer countdown effect
+        let timeLeft = 47;
+        const timerElement = document.querySelector('.timer strong');
+        
+        setInterval(() => {
+            timeLeft--;
+            if (timeLeft > 0) {
+                timerElement.textContent = `${timeLeft} minutes`;
+            } else {
+                timerElement.textContent = 'EXPIRED';
+                timerElement.style.color = '#dc3545';
+            }
+        }, 60000); // Update every minute
+    </script>
+</body>
+</html>
