@@ -29,6 +29,7 @@ An attacker successfully conducted an OSINT reconnaissance against a new employe
 > IT Support Team  
 > AtlasConsult Co.
 
+![Mock portal](./mock_portal_pic.png)
 ---
 
 ## **Outcome**
